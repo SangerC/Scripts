@@ -11,14 +11,20 @@ feh --bg-scale /home/cullen/Pictures/Wallpaper/RandomWallpapers/$wallpaper /home
 
 #Three Monitors
 
-#wallpaperNumber2=$(expr $RANDOM % $files + 1)p
+wallpaperNumber2=$(expr $RANDOM % $files + 1)p
 
-#wallpaper2=$(ls '/home/cullen/Pictures/Wallpaper/RandomWallpapers' | cat | sed -n $wallpaperNumber2)
+wallpaper2=$(ls '/home/cullen/Pictures/Wallpaper/RandomWallpapers' | cat | sed -n $wallpaperNumber2)
 
-#while [ "$wallpaper" == "$wallpaper2" ]
-#do 
-#    wallpaperNumber2=$(expr $RANDOM % $files + 1)p
-#    wallpaper2=$(ls '/home/cullen/Pictures/Wallpaper/RandomWallpapers' | cat | sed -n $wallpaperNumber2)
-#done
+while [ "$wallpaper" == "$wallpaper2" ]
+do 
+    wallpaperNumber2=$(expr $RANDOM % $files + 1)p
+    wallpaper2=$(ls '/home/cullen/Pictures/Wallpaper/RandomWallpapers' | cat | sed -n $wallpaperNumber2)
+done
 
-#feh --bg-scale /home/cullen/Pictures/Wallpaper/RandomWallpapers/$wallpaper /home/cullen/Pictures/Wallpaper/LeftScreenWallpaper.png /home/cullen/Pictures/Wallpaper/RandomWallpapers/$wallpaper2
+
+wallpaperNumber3=$(expr $RANDOM % $files + 1)p
+
+wallpaper3=$(ls '/home/cullen/Pictures/Wallpaper/RandomWallpapers' | cat | sed -n $wallpaperNumber3)
+
+
+feh --bg-scale /home/cullen/Pictures/Wallpaper/RandomWallpapers/$wallpaper /home/cullen/Pictures/Wallpaper/LeftScreenWallpaper2.png /home/cullen/Pictures/Wallpaper/RandomWallpapers/$wallpaper2 /home/cullen/Pictures/Wallpaper/RandomWallpapers/$wallpaper3
